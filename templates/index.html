@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1> Kuala lumpure House Price Prediction </h1>
+        <form action="{{ url_for('predict') }}" method="post">
+
+            <label>Size (sq. ft.):</label>
+            <input type="number" step="0.1" name="size" required><br>
+
+            <label>Rooms:</label>
+            <input type="number" name="rooms" required><br>
+
+            <label>Bathrooms:</label>
+            <input type="number" name="bathrooms" required><br>
+
+            <label>Car Parks:</label>
+            <input type="number" name="carparks" required><br>
+
+            <label>Furnishing:</label>
+            <select name="furnishing" required>
+                <option value="Furnished">Furnished</option>
+                <option value="Partly Furnished">Partly Furnished</option>
+                <option value="Unfurnished">Unfurnished</option>
+                <option value="Unknown">Unknown</option>
+            </select><br>
+
+            <label>Property Type:</label>
+            <select name="property_type" required>
+                <option value="Serviced Residence">Serviced Residence</option>
+                <option value="Bungalow">Bungalow</option>
+                <option value="Condominium">Condominium</option>
+                <option value="Semi-detached House">Semi-detached House</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Terrace House">Terrace House</option>
+                <option value="Townhouse">Townhouse</option>
+                <option value="Other">Other</option>
+                <option value="Land">Land</option>
+            </select><br>
+
+            <label>Area:</label>
+            <select name="area" required>
+                <option value="KLCC">KLCC</option>
+                <option value="Damansara Heights">Damansara Heights</option>
+                <option value="Dutamas">Dutamas</option>
+                <option value="Bukit Jalil">Bukit Jalil</option>
+                <option value="Taman Tun Dr Ismail">Taman Tun Dr Ismail</option>
+                <option value="Sri Petaling">Sri Petaling</option>
+                <option value="Bukit Tunku (Kenny Hills)">Bukit Tunku (Kenny Hills)</option>
+                <option value="Mont Kiara">Mont Kiara</option>
+                <option value="Desa ParkCity">Desa ParkCity</option>
+                <option value="Bangsar South">Bangsar South</option>
+                <option value="Ampang Hilir">Ampang Hilir</option>
+                <option value="Jalan Klang Lama (Old Klang Road)">Jalan Klang Lama (Old Klang Road)</option>
+                <option value="KL City">KL City</option>
+                <option value="Sungai Besi">Sungai Besi</option>
+                <option value="KL Sentral">KL Sentral</option>
+                <option value="Setapak">Setapak</option>
+                <option value="City Centre">City Centre</option>
+                <option value="Country Heights Damansara">Country Heights Damansara</option>
+                <option value="Taman Desa">Taman Desa</option>
+                <option value="Sentul">Sentul</option>
+                <option value="Bangsar">Bangsar</option>
+                <option value="Segambut">Segambut</option>
+                <option value="Batu Caves">Batu Caves</option>
+                <option value="Wangsa Maju">Wangsa Maju</option>
+                <option value="Kepong">Kepong</option>
+                <option value="Cheras">Cheras</option>
+                <option value="Taman Melawati">Taman Melawati</option>
+                <option value="Setiawangsa">Setiawangsa</option>
+                <option value="Ampang">Ampang</option>
+                <option value="Bukit Bintang">Bukit Bintang</option>
+                <option value="Sri Hartamas">Sri Hartamas</option>
+                <option value="Jalan Sultan Ismail">Jalan Sultan Ismail</option>
+                <option value="Jalan Kuching">Jalan Kuching</option>
+                <option value="KL Eco City">KL Eco City</option>
+                <option value="Seputeh">Seputeh</option>
+                <option value="Pantai">Pantai</option>
+                <option value="Kuchai Lama">Kuchai Lama</option>
+                <option value="Bandar Menjalara">Bandar Menjalara</option>
+                <option value="Jalan Ipoh">Jalan Ipoh</option>
+                <option value="OUG">OUG</option>
+                <option value="Brickfields">Brickfields</option>
+                <option value="Desa Pandan">Desa Pandan</option>
+                <option value="Sunway SPK">Sunway SPK</option>
+                <option value="Desa Petaling">Desa Petaling</option>
+                <option value="Bandar Damai Perdana">Bandar Damai Perdana</option>
+                <option value="Keramat">Keramat</option>
+                <option value="Pandan Perdana">Pandan Perdana</option>
+                <option value="Salak Selatan">Salak Selatan</option>
+                <option value="Titiwangsa">Titiwangsa</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if prediction_text %}
+            <h2>{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
