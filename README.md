@@ -1,6 +1,12 @@
 
 # 🏠 House Price Prediction & Market Segmentation in Kuala Lumpur, Malaysia
 
+
+<img width="1032" height="532" alt="image" src="https://github.com/user-attachments/assets/1a457e72-1601-405a-875a-25358586885a" />
+
+
+
+
 This project applies **machine learning** to the Kuala Lumpur housing market, focusing on two main goals:
 
 1. **Predicting house prices** using supervised learning.
@@ -56,10 +62,12 @@ This was developed as part of a group academic project to demonstrate how data s
 
 #### Home Page (Form Input)
 
-<img width="1233" height="877" alt="image" src="https://github.com/user-attachments/assets/76ae0156-b790-4323-8456-072c99bbc734" />
+<img width="1170" height="861" alt="image" src="https://github.com/user-attachments/assets/3ec19082-690c-4e19-99d9-b147c011a9d9" />
 
 
 #### Prediction Result (Example)
+
+
 
 <img width="1126" height="620" alt="image" src="https://github.com/user-attachments/assets/7928ce9c-0468-427a-b820-397fe8a9b7b5" />
 
